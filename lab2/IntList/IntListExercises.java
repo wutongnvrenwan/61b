@@ -26,13 +26,11 @@ public class IntListExercises {
     public static void setToZeroIfMaxFEL(IntList L) {
         IntList p = L;
         while (p != null) {
-            int currentMax = max(p);
-            boolean firstEqualLastMax=firstDigitEqualsLastDigit(currentMax);
-            boolean firstEqualLastcurrent=firstDigitEqualsLastDigit(p.first);
-            if (firstEqualLastMax && firstEqualLastcurrent ){
+            if (firstDigitEqualsLastDigit(max(p))) {
                 p.first = 0;
             }
             p = p.rest;
+
         }
     }
 
